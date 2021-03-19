@@ -2,7 +2,7 @@
 
 It is a ride searching web application,
 
-            <b>Work:</b>
+            Work:
             1. You can choose a ride.
             2. Login system.
             3. React Router system.
