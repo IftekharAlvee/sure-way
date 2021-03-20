@@ -1,0 +1,18 @@
+[
+    {"id":"1",
+        "name":"Bike",
+        "image":"https://images.pexels.com/photos/7099821/pexels-photo-7099821.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"},
+
+    {"id":"2",
+        "name":"Car",
+        "image":"https://images.pexels.com/photos/4077271/pexels-photo-4077271.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"},
+
+    {"id":"3",
+        "name":"Bus",
+        "image":"https://images.pexels.com/photos/3829175/pexels-photo-3829175.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"},
+
+    {"id":"4",
+        "name":"Train",
+        "image":"https://images.pexels.com/photos/2976684/pexels-photo-2976684.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"}
+
+]

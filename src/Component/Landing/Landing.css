@@ -1,0 +1,6 @@
+.landing{
+    background-image: url(../../Assets/img/background.jpg);
+    background-size: cover;
+    height:130vh;
+    text-align: center;
+}
