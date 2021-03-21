@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Col, Container, Image, Row } from "react-bootstrap";
 import { useParams } from "react-router";
 import fakeData from '../../fakedata/fakedata.json';
-import map from '../../Assets/img/Map.png'
-import Place from "../Place/Place";
+import Place from "../Place/Place"
+import MyComponent from "../GoogleMap/GoogleMap"
 
 const Destination = () => {
     const {id} = useParams();
@@ -25,7 +25,7 @@ const Destination = () => {
       <Container>
         <Row>
           <Col sm={4}><Place check={check} ></Place></Col>
-          <Col sm={8}><Image fluid src={map}></Image></Col>
+          <Col sm={8}><MyComponent></MyComponent></Col>
         </Row>
       </Container>
     </div>

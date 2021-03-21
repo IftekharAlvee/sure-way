@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Form } from 'react-bootstrap';
 import ChooseVehicle from './ChooseVehicle';
 import PlaceForm from './PlaceForm';
 
@@ -8,12 +7,18 @@ const Place = (props) => {
     const handleClick = () => {
         setSituation(!situation);
     }
+    const [confirm, setConfirm] = useState(true);
+    const handleConfirm = () => {
+        setConfirm(!confirm);
+    }
     return (
         <div>
             {
-                situation ? <PlaceForm></PlaceForm> : <ChooseVehicle check={props.check}></ChooseVehicle>
+                situation ? <PlaceForm></PlaceForm> :  <ChooseVehicle check={props.check} confirm={confirm} ></ChooseVehicle> 
             }
-            <button onClick={handleClick} >Confirm</button>
+            {
+                situation ? <button onClick={handleClick} >Place Order</button> : <button onClick={handleConfirm}>{confirm ? <span>Confirm</span> : <span>Thanks for order</span> }</button>
+            }
         </div>
     );
 };

@@ -7,6 +7,7 @@ import { useHistory, useLocation } from "react-router";
 // import { useForm } from "react-hook-form";
 
 import  {initializeLoginFramework, handleGoogleSignIn, handleSignOut,  createUserWithEmailAndPassword, signInWithEmailAndPassword } from "./LoginManager"
+import { Container } from "@material-ui/core";
 
 
 // if (!firebase.apps.length) {
@@ -23,6 +24,7 @@ const Login = () => {
     
     initializeLoginFramework();
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+    console.log(loggedInUser);
     const history = useHistory();
     const location = useLocation();
     const { from } = location.state || { from: { pathname: "/" } };
@@ -100,39 +102,7 @@ const Login = () => {
   };
   
 
-    
 
-    
-//   const handleGoogleSignIn = () => {
-//     var googleProvider = new firebase.auth.GoogleAuthProvider();
-
-//     firebase
-//       .auth()
-//       .signInWithPopup(googleProvider)
-//       .then((result) => {
-//         /** @type {firebase.auth.OAuthCredential} */
-//         var credential = result.credential;
-
-//         // This gives you a Google Access Token. You can use it to access the Google API.
-//         var token = credential.accessToken;
-//         // The signed-in user info.
-//         var {displayName, email} = result.user;
-//         const signedInUser = {name: displayName, email: email};
-//         setLoggedInUser(signedInUser);
-//         history.replace(from);
-//         // ...
-//       })
-//       .catch((error) => {
-//         // Handle Errors here.
-//         var errorCode = error.code;
-//         var errorMessage = error.message;
-//         // The email of the user's account used.
-//         var email = error.email;
-//         // The firebase.auth.AuthCredential type that was used.
-//         var credential = error.credential;
-//         // ...
-//       });
-//   };
   const loginStyle = {
       textAlign: 'center'
   }
@@ -143,12 +113,10 @@ const Login = () => {
       {user.isSignedIn ? (
         <button onClick={signOut}>Sign out</button>
       ) : (
-        <button onClick={googleSignIn}>Sign in</button>
+        <button onClick={googleSignIn}>Google Sign in</button>
       )}
       <br />
-      {/* <button onClick={fbSignIn}>Faceboo Sign In</button>
-      <br />
-      <button onClick={githubSignIn}>Github Sign In</button> */}
+     
 
       {user.isSignedIn && (
         <div>
@@ -158,8 +126,11 @@ const Login = () => {
         </div>
       )}
 
-      <div>
+      <div > 
         <h1>Our Own Authentication</h1>
+       
+       <Container>
+       <div className="form-box">
         <form action="" onSubmit={handleSubmit}>
           <input
             type="checkbox"
@@ -193,6 +164,11 @@ const Login = () => {
           <br />
           <input type="submit" value={newUser ? "Sign Up" : "Sign In"} />
         </form>
+
+
+        </div>
+       </Container>
+        
         <p style={{ color: "red" }}>{user.error}</p>
         {user.userCreated && (
           <p style={{ color: "green" }}>
