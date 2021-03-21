@@ -1,26 +1,13 @@
 import React, { useContext, useState } from "react";
-// import firebase from "firebase/app";
-// import "firebase/auth";
-// import firebaseConfig from "./firebase.config";
 import {UserContext} from "../Home/Home"
 import { useHistory, useLocation } from "react-router";
-// import { useForm } from "react-hook-form";
-
 import  {initializeLoginFramework, handleGoogleSignIn, handleSignOut,  createUserWithEmailAndPassword, signInWithEmailAndPassword } from "./LoginManager"
 import { Container } from "@material-ui/core";
-
-
-// if (!firebase.apps.length) {
-//     firebase.initializeApp(firebaseConfig);
-//  }else {
-//     firebase.app(); // if already initialized, use that one
-//  }
 
 
 
 const Login = () => {
 
-    
     
     initializeLoginFramework();
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);

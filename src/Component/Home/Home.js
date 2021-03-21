@@ -1,5 +1,5 @@
 import React, { createContext, useState } from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Destination from "../Destination/Destination";
 import Header from "../Header/Header";
 import Landing from "../Landing/Landing";
@@ -29,9 +29,6 @@ const Home = () => {
             <Route exact path="/login">
               <Login></Login>
             </Route>
-            {/* <Route path="/destination">
-                            <Destination></Destination>
-                        </Route> */}
             <PrivateRoute path="/destination/:id">
               <Destination></Destination>
             </PrivateRoute>

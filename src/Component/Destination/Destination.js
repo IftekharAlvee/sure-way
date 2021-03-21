@@ -7,7 +7,6 @@ import MyComponent from "../GoogleMap/GoogleMap"
 
 const Destination = () => {
     const {id} = useParams();
-    // const code = Number(id);
 
     // console.log(code);
     const [vehicleInfo, setVehicleInfo] = useState([]);

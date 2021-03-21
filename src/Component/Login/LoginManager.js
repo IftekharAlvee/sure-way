@@ -80,9 +80,6 @@ export const handleGoogleSignIn = () => {
           newUserInfo.userCreated = false;
           
           return newUserInfo;
-          var errorCode = error.code;
-          var errorMessage = error.message;
-          console.log(errorCode, errorMessage);
           // ..
         });
 };
@@ -108,10 +105,6 @@ export const signInWithEmailAndPassword = (email, password) => {
       newUserInfo.error = error.message;
       newUserInfo.userCreated = false;
       return newUserInfo;
-
-      var errorCode = error.code;
-      var errorMessage = error.message;
-      console.log(errorCode, errorMessage);
     });
 };
 
